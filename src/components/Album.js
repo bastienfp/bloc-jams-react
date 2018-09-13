@@ -100,7 +100,7 @@ class Album extends Component {
       } else {
         let min = Math.floor(time / 60);
         let sec = Math.round(time % 60);
-        return (`${min}:${sec}`)
+        return (sec < 10 ? (`${min}:0${sec}`) : (`${min}:${sec}`))
       }
     }
 
